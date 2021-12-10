@@ -1,0 +1,972 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GXP-Arabi</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/preloader.css">
+    <script src="js/preload.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;700;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7f43f7d1fb.js" crossorigin="anonymous"></script>
+    <script src='https://code.jquery.com/jquery-1.10.2.min.js'></script>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+    <script src="js/openform.js"></script>
+    <script src="js/menu.js"></script>
+
+
+    <script src="js/news-1.js"></script>
+    <script src="js/voice-search.js"></script>
+    <script src="https://apis.google.com/js/platform.js"></script>
+    <script src="js/youtube.js"></script>
+    <script src="js/search.js"></script>
+
+
+    
+</head>
+<body>
+
+    <div class="preloader" id="preloader">
+         <div class="preload">
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+            <div class="loader">
+               <div class="dot"></div>
+            </div>
+         </div>
+         <div class="text">
+            Please wait
+         </div>
+    </div>
+
+    
+    <div class="container">
+
+        <div class="themes">
+            <div class="logo-row">
+                <div class="logo-wrapper">
+                    <div class="logo-container clearfix">
+
+                    <div class="wrapper2">
+                    </div>
+
+                        <nav>
+                            <input type="checkbox" id="show-search">
+                            <input type="checkbox" id="show-menu">
+                            <label for="show-menu" class="menu-icon" id="menu-icon">
+                                <i class="fas fa-bars" id="fas" aria-hidden="true" onclick=openMenu();>القائمة </i>
+                                <i class="fas fa-times" id="far" aria-hidden="true" style="display:none;" onclick=closeMenu();></i>
+                            </label>
+                                <div class="content">
+                                        <ul class="links">
+                                            <li class="parent" id="par"><a href="#">الرئيسيه</a></li>
+
+                                            <li class="parent"><a href="#" class="desktop-link"><i class="fab fa-windows" aria-hidden="true"></i>أنظمة ألتشغل <i class="fas fa-chevron-down" id="chevon"></i></a>
+                                                <input type="checkbox" id="show-system">
+                                                <label for="show-system"><i class="fab fa-windows" aria-hidden="true"></i> أنظمة ألتشغل <i class="fas fa-chevron-down" id="chevon"></i></label>
+                                                <ul class="bord">
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fab fa-windows" aria-hidden="true"></i> ويندوز <i class="fas fa-chevron-down" id="chevon"></i></a>
+                                                        <input type="checkbox" id="show-windows">
+                                                        <label for="show-windows"><i class="fab fa-windows" aria-hidden="true"></i> ويندوز <i class="fas fa-chevron-down" id="chevon"></i></label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#">ويندوز 11</a></li>
+                                                            <li class="parent"><a href="#">ويندوز 10</a></li>
+                                                            <li class="parent"><a href="#">ويندوز 8.1,8</a></li>
+                                                            <li class="parent"><a href="#">ويندوز 7</a></li>
+                                                            <li class="parent"><a href="#">ويندوز vist</a></li>
+                                                            <li class="parent"><a href="#">ويندوز xp</a></li>
+                                                            <li class="parent"><a href="#">ويندوز سيرفر</a></li>
+                                                        </ul>     
+                                                    </li>
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fab fa-linux" aria-hidden="true"></i> لينكس <i class="fas fa-chevron-down" id="chevon"></i></a>
+                                                        <input type="checkbox" id="show-linex">
+                                                        <label for="show-linex"><i class="fab fa-linux" aria-hidden="true"></i> لينكس <i class="fas fa-chevron-down" id="chevon"></i></label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#" class="desktop-link"><i class="fab fa-wpbeginner" aria-hidden="true"></i> للمستخدمين المبتدئين <i class="fas fa-chevron-down" id="chevon"></i></a>
+                                                                <input type="checkbox" id="show-beggener">
+                                                                <label for="show-beggener"><i class="fab fa-wpbeginner" aria-hidden="true"></i> للمستخدمين المبتدئين <i class="fas fa-chevron-down" id="chevon"></i></label> 
+                                                                <ul class="bord">
+                                                                    <li class="parent"><a href="#"> Mint</a></li>
+                                                                    <li class="parent"><a href="#"> Manjaro Linux</a></li>
+                                                                    <li class="parent"><a href="#">PCLinuxOS</a></li>
+                                                                    <li class="parent"><a href="#">Elementary OS</a></li>
+                                                                    <li class="parent"><a href="#"><i class="fab fa-ubuntu" aria-hidden="true"></i> Ubuntu</a></li>
+                                                                </ul>   
+                                                            </li>
+                                                            <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-brain" aria-hidden="true"></i> للمستخدمين المتقدمين <i class="fas fa-chevron-down" id="chevon"></i></a>
+                                                                <input type="checkbox" id="show-advanced">
+                                                                <label for="show-advanced"><i class="fas fa-brain" aria-hidden="true"></i> للمستخدمين المتقدمين <i class="fas fa-chevron-down" id="chevon"></i></label> 
+                                                                <ul class="bord">
+                                                                    <li class="parent"><a href="#"> Gentoo Linux</a></li>
+                                                                    <li class="parent"><a href="#"> Slackware</a></li>
+                                                                    <li class="parent"><a href="#"> Debian</a></li>
+                                                                    <li class="parent"><a href="#"><i class="fab fa-fedora" aria-hidden="true"></i> Fedora</a></li>
+                                                                    <li class="parent"><a href="#"> Arch Linux</a></li>
+                                                                </ul>   
+                                                            </li>
+                                                        </ul>     
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+
+                                            <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-mobile-alt" aria-hidden="true"></i> أنظمة الهواتف <i class="fas fa-chevron-down" id="chevon"></i></a>
+                                                <input type="checkbox" id="show-phone">
+                                                <label for="show-phone"><i class="fas fa-mobile-alt" aria-hidden="true"></i> أنظمة الهواتف <i class="fas fa-chevron-down" id="chevon"></i></label> 
+                                                <ul class="bord">
+                                                    <li class="parent"><a href="#"><i class="fab fa-android" aria-hidden="true"></i> Android</a></li>
+                                                    <li class="parent"><a href="#">Harmony OS</a></li>
+                                                    <li class="parent"><a href="#">مرجعات الهواتف</a></li>
+                                                </ul>     
+                                            </li>
+
+                                            <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-tasks" aria-hidden="true"></i> برامج <i class="fas fa-chevron-down" id="chevon"></i></a>
+                                                <input type="checkbox" id="show-tasks">
+                                                <label for="show-tasks"><i class="fas fa-tasks" aria-hidden="true"></i> برامج <i class="fas fa-chevron-down" id="chevon"></i></label> 
+                                                <ul class="bord">
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-snowflake"></i> برامج أساسية </a>
+                                                        <input type="checkbox" id="show-main">
+                                                        <label for="show-main"><i class="fas fa-snowflake"></i> برامج أساسية</label> 
+
+                                                        <ul class="bord">
+
+                                                            <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-book-open" aria-hidden="true"></i> مكتبية | اوفيس</a>
+                                                                <input type="checkbox" id="show-micro">
+                                                                <label for="show-micro"><i class="fas fa-book-open" aria-hidden="true"></i> مكتبية | اوفيس</label> 
+                                                                <ul class="bord">
+                                                                    <li class="parent"><a href="#"><i class="far fa-file-word"></i> Word</a></li>
+                                                                    <li class="parent"><a href="#"><i class="far fa-file-excel"></i> Exel</a></li>
+                                                                    <li class="parent"><a href="#"><i class="far fa-file-powerpoint"></i> PowerPoint</a></li>
+                                                                    <li class="parent"><a href="#"><i class="fas fa-shield-virus" aria-hidden="true"></i> Access</a></li>
+                                                                    <li class="parent"><a href="#"><i class="fas fa-shield-virus" aria-hidden="true"></i> Info Bath</a></li>
+                                                                    <li class="parent"><a href="#"><i class="fas fa-shield-virus" aria-hidden="true"></i> Publicish</a></li>
+                                                                    <li class="parent"><a href="#"><i class="fas fa-shield-virus" aria-hidden="true"></i> Outlook</a></li>
+                                                                    <li class="parent"><a href="#"><i class="fas fa-shield-virus" aria-hidden="true"></i> Grove</a></li>
+                                                                </ul>           
+                                                            </li>
+
+                                                            <li class="parent"><a href="#"><i class="fas fa-film" aria-hidden="true"></i> Maltimedia</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-archive" aria-hidden="true"></i> ضغط الملفات</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-download" aria-hidden="true"></i> التحميل</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-compact-disc"></i> نسخ ألاسطوانات</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-quran" aria-hidden="true"></i> برامج أسلامية</a></li>
+                                                        </ul>   
+                                                    </li>
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-shield-alt" aria-hidden="true"></i> حمايه </a>
+                                                        <input type="checkbox" id="show-safe">
+                                                        <label for="show-safe"><i class="fas fa-shield-alt" aria-hidden="true"></i> حمايه</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"><i class="fas fa-shield-virus" aria-hidden="true"></i> Antivirus</a></li>
+                                                            <li class="parent"><a href="#"><i class="fab fa-artstation" aria-hidden="true"></i> AntiMalwer</a></li>
+                                                        </ul>   
+                                                    </li>
+                                                    
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-tools" aria-hidden="true"></i> صيانة </a>
+                                                        <input type="checkbox" id="show-repair">
+                                                        <label for="show-repair"><i class="fas fa-tools" aria-hidden="true"></i> صيانة</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"><i class="fas fa-hdd" aria-hidden="true"></i> SoftWare</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-wrench" aria-hidden="true"></i> HardWara</a></li>
+                                                        </ul>   
+                                                    </li>
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-network-wired" aria-hidden="true"></i> أنترنت </a>
+                                                        <input type="checkbox" id="show-internet">
+                                                        <label for="show-internet"> أنترنت</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"><i class="fas fa-cloud-download-alt" aria-hidden="true"></i> مديرو التحميل</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-share-alt" aria-hidden="true"></i> مشاركة الملفات</a></li>
+                                                            <li class="parent"><a href="#"><i class="fab fa-chrome" aria-hidden="true"></i> متصفحات واضافات</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-hands-helping" aria-hidden="true"></i> المساعدة عن بعد</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-compress-alt" aria-hidden="true"></i> أختصار الروابط</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-comments" aria-hidden="true"></i> محادثات ودردشة</a></li>
+                                                        </ul>   
+                                                    </li>
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-pen-alt" aria-hidden="true"></i> تصميم وتصوير ومونتاج </a>
+                                                        <input type="checkbox" id="show-design">
+                                                        <label for="show-design"><i class="fas fa-pen-alt" aria-hidden="true"></i> تصميم وتصوير ومونتاج</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"><i class="fab fa-adobe" aria-hidden="true"></i> Adobe</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-images" aria-hidden="true"></i> برامج عرض الصور</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-image" aria-hidden="true"></i> التعديل علي الصور</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-video" aria-hidden="true"></i> التعديل علي الفيديو</a></li>
+                                                            <li class="parent"><a href="#"><i class="far fa-file-image" aria-hidden="true"></i> تحول صيغة الصور</a></li>
+                                                            <li class="parent"><a href="#"><i class="far fa-file-video" aria-hidden="true"></i> تحويل صيغة الفيديو</a></li>
+                                                        </ul>   
+                                                    </li>
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-feather-alt" aria-hidden="true"></i> اخري </a>
+                                                        <input type="checkbox" id="show-other">
+                                                        <label for="show-other"> اخري</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"><i class="fas fa-window-restore" aria-hidden="true"></i> إستعادة </a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-trash-alt" aria-hidden="true"></i> خذف الملفات</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-assistive-listening-systems" aria-hidden="true"></i> انظمة وهمية</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-compact-disc" aria-hidden="true"></i> أسطوانات وهمية</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-phone-square-alt" aria-hidden="true"></i> أتصالات</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-archive" aria-hidden="true"></i> الضغط والحرق</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-desktop" aria-hidden="true"></i> سطح المكتب</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-feather-alt" aria-hidden="true"></i> برامج اخري</a></li>
+                                                        </ul>   
+                                                    </li>
+
+                                                </ul>     
+                                            </li>
+
+                                            <li class="parent"><a href="#" class="desktop-link"><i aria-hidden="true" class="fa fa-video-camera"></i> دورات تعليمية  <i class="fas fa-chevron-down" id="chevon"></i></a>
+                                                <input type="checkbox" id="show-learning">
+                                                <label for="show-learning"><i aria-hidden="true" class="fa fa-video-camera"></i> دورات تعليمية <i class="fas fa-chevron-down" id="chevon"></i></label> 
+                                                <ul class="bord">
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-book-open" aria-hidden="true"></i> Office</a>
+                                                        <input type="checkbox" id="show-Office">
+                                                        <label for="show-Office"><i class="fas fa-book-open" aria-hidden="true"></i> Office</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-word" aria-hidden="true"></i> Word</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-excel" aria-hidden="true"></i> Exel</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-powerpoint" aria-hidden="true"></i> PowerPoint</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-access" aria-hidden="true"></i> Access</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-Info" aria-hidden="true"></i> Info Bath</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-publicish" aria-hidden="true"></i> Publicish</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-outlook" aria-hidden="true"></i> Outlook</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-file-grove" aria-hidden="true"></i> Grove</a></li>
+                                                        </ul>   
+                                                    </li>
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fab fa-adobe" aria-hidden="true"></i> Adobe  </a>
+                                                        <input type="checkbox" id="show-Adobe">
+                                                        <label for="show-Adobe"><i class="fab fa-adobe" aria-hidden="true"></i> Adobe</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"> PhotoShop</a></li>
+                                                            <li class="parent"><a href="#"> Adobe Premier</a></li>
+                                                            <li class="parent"><a href="#"> Adobe Acrobat</a></li>
+                                                        </ul>   
+                                                    </li>
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="far fa-money-bill-alt" aria-hidden="true"></i> الربح من الانترنت  </a>
+                                                        <input type="checkbox" id="show-earn">
+                                                        <label for="show-earn"><i class="far fa-money-bill-alt" aria-hidden="true"></i> الربح من الانترنت</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"><i class="fab fa-blogger" aria-hidden="true"></i> دورة بلوجر</a></li>
+                                                            <li class="parent"><a href="#"><i class="fab fa-wordpress" aria-hidden="true"></i> دورة الوردبريس</a></li>
+                                                            <li class="parent"><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i> دورة اليوتيوب</a></li>
+                                                            <li class="parent"><a href="#"><i class="fab fa-shopify" aria-hidden="true"></i> دورة الدروب شيبينج</a></li>
+                                                        </ul>   
+                                                    </li>
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fab fa-html5" aria-hidden="true"></i> Developer  </a>
+                                                        <input type="checkbox" id="show-developer">
+                                                        <label for="show-developer"><i class="fab fa-html5" aria-hidden="true"></i> developer</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"><i class="fab fa-html5" aria-hidden="true"></i> HTML &amp; CSS effect </a></li>
+                                                            <li class="parent"><a href="#"><i class="fab fa-js" aria-hidden="true"></i> JavaScript </a></li>
+                                                            <li class="parent"><a href="#"><i class="fab fa-php" aria-hidden="true"></i> PHP </a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-building" aria-hidden="true"></i> Build a WebSite </a></li>
+                                                            <li class="parent"><a href="#"><i class="far fa-file-code" aria-hidden="true"></i> Become a Developer </a></li>
+                                                        </ul>   
+                                                    </li>
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> مشاكل الويندوز </a>
+                                                        <input type="checkbox" id="show-problem">
+                                                        <label for="show-problem"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> مشاكل الويندوز</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"><i class="fab fa-adobe" aria-hidden="true"></i> تسريع وصيانة الويندوز</a></li>
+                                                            <li class="parent"><a href="#"><i class="fas fa-images" aria-hidden="true"></i> معالجة البادسيكتور</a></li>
+                                                        </ul>   
+                                                    </li>
+
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fas fa-edit" aria-hidden="true"></i> التعديل </a>
+                                                        <input type="checkbox" id="show-edit">
+                                                        <label for="show-edit"><i class="fas fa-edit" aria-hidden="true"></i> التعديل</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#">التعديل علي الويندوز</a></li>
+                                                            <li class="parent"><a href="#">التعديل علي البرامج</a></li>
+                                                        </ul>   
+                                                    </li>
+
+                                                </ul>     
+                                            </li>
+
+                                            <li class="parent"><a href="#"><i class="fas fa-microchip" aria-hidden="true"></i> تعريفات </a></li>
+
+                                            <li class="parent"><a href="#" class="desktop-link"><i aria-hidden="true" class="fa fa-book"></i> كتب مدرسيه  <i class="fas fa-chevron-down" id="chevon"></i></a>
+                                                <input type="checkbox" id="show-book">
+                                                <label for="show-book"><i aria-hidden="true" class="fa fa-book"></i> كتب مدرسيه <i class="fas fa-chevron-down" id="chevon"></i></label>
+                                                <ul class="bord">
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fab fa-linux" aria-hidden="true"></i> ابتداي</a>
+                                                    <input type="checkbox" id="show-first-g">
+                                                    <label for="show-first-g"> ابتداي</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"> الصف ألاول ألابتدائي </a></li>
+                                                            <li class="parent"><a href="#"> الصف الثاني الابتدائي </a></li>
+                                                            <li class="parent"><a href="#"> الصف ألثالث ألابتدائي </a></li>
+                                                            <li class="parent"><a href="#"> الصف الرابع الابتدائي </a></li>
+                                                            <li class="parent"><a href="#"> الصف الخامس الابتدائي </a> </li>
+                                                            <li class="parent"><a href="#"> الصف الرابع الابتدائي </a> </li>
+                                                        </ul>     
+                                                    </li>
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fab fa-linux" aria-hidden="true"></i> اعدادي</a>
+                                                    <input type="checkbox" id="show-second-g">
+                                                    <label for="show-second-g"> اعدادي</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"> الصف ألاول ألاعدادي </a> </li>
+                                                            <li class="parent"><a href="#"> الصف الثاني ألاعدادي </a></li>
+                                                            <li class="parent"><a href="#"> الصف ألثالث ألاعدادي </a> </li>
+                                                        </ul>     
+                                                    </li>
+                                                    <li class="parent"><a href="#" class="desktop-link"><i class="fab fa-linux" aria-hidden="true"></i> ثانوي</a>
+                                                    <input type="checkbox" id="show-third-g">
+                                                    <label for="show-third-g"> ثانوي</label> 
+                                                        <ul class="bord">
+                                                            <li class="parent"><a href="#"> الصف ألاول ألثانوي </a></li>
+                                                            <li class="parent"><a href="#"> الصف الثاني ألثانوي </a></li>
+                                                            <li class="parent"><a href="#"> الصف ألثالث ألثانوي </a>
+                                                        </li></ul>   
+                                                    </li>
+                                                </ul>     
+                                            </li>
+
+                                            <li class="parent"><a href="#" class="desktop-link"><i aria-hidden="true" class="fa fa-gamepad"></i> ألعاب  <i class="fas fa-chevron-down" id="chevon"></i></a>
+                                                <input type="checkbox" id="show-game">
+                                                <label for="show-game"><i aria-hidden="true" class="fa fa-gamepad"></i> العاب <i class="fas fa-chevron-down" id="chevon"></i></label> 
+                                                <ul class="bord">
+                                                    <li class="parent"><a href="#"> كرة قدم pes</a></li>
+                                                    <li class="parent"><a href="#"> كرة قدم fifa</a></li>
+                                                    <li class="parent"><a href="#">استراتيجية Strategy</a></li>
+                                                    <li class="parent"><a href="#">اكشن Action</a></li>
+                                                    <li class="parent"><a href="#"> رعـب horror</a></li>
+                                                    <li class="parent"><a href="#">سباق race</a></li>
+                                                    <li class="parent"><a href="#">سوبر ماريو</a></li>
+                                                </ul>     
+                                            </li>
+
+                                            <li class="parent"><a href="#" class="desktop-link"><i aria-hidden="true" class="fa fa-tv"></i> أنمي مترجم  <i class="fas fa-chevron-down" id="chevon"></i></a>
+                                                <input type="checkbox" id="show-anime">
+                                                <label for="show-anime"><i aria-hidden="true" class="fa fa-tv"></i> أنمي مترجم <i class="fas fa-chevron-down" id="chevon"></i></label> 
+                                                <ul class="bord">
+                                                    <li class="parent"><a href="#">مسلسلات أنمي</a></li>
+                                                    <li class="parent"><a href="#">أفلام أنمي</a></li>
+                                                    <li class="parent"><a href="#">مانجا</a></li>
+                                                </ul>     
+                                            </li>
+
+                                            <li class="parent"><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> مالوير شوب</a></li>
+
+                                            <div id="social-media2">
+                                                <li><a class="google-plus" href="http://"></a></li>
+                                                <li><a class="twitter" href="https://twitter.com/DeghedyMeliodas"></a></li>
+                                                <li><a class="instagram" href="https://www.instagram.com/gxp_arabi"></a></li>
+                                                <li><a class="youtube" href="https://www.youtube.com/channel/UCNDVuPTSKX9MFPJ3ANimOqQ"></a></li>
+                                                <li><a class="facebook" href="https://www.facebook.com/gxp.arabi"></a></li>
+                                            </div>
+
+
+                                            <div id="mobile-search">
+                                                <form role="search" method="get" class="search-form" action="">
+                                                    <label>
+                                                        <input type="search" class="search-field" placeholder="بحث …" value="" name="s">
+                                                    </label>
+                                                    <input type="submit" class="search-submit" value="">
+			                                    </form>						
+                                            </div>
+
+
+
+                                        </ul>
+
+
+                                </div>
+                        </nav>
+
+
+                        <div id="logo" class="image-logo" style="margin-top: -20px";>
+                            <a  href="#" data-wpel-link="internal">
+                                    <picture class="tie-logo-default tie-logo-picture">
+                                        <source class="tie-logo-source-default tie-logo-source" srcset="img/logo.jpg">
+                                        <img class="tie-logo-img-default tie-logo-img" src="img/logo.jpg" width="700" height="201" style="max-height:201px; width: auto;">
+                                    </picture>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="header-top">
+
+            <div class="menu-top">
+                <ul class="nav1">
+                    <li><a href="#"><i aria-hidden="true" class="fa fa-user-secret"></i> سياسة الخصوصيه</a></li>
+                    <li><a href="#"><i aria-hidden="true" class="fa fa-phone"></i> إتصل بنـــا</a></li>
+                    <li><a href="#"><i aria-hidden="true" class="fa fa-envelope"></i> الابلاغ عن رابط لا يعمل</a></li>
+                </ul>
+                
+            </div>
+
+
+            <div class="menu2">
+                <ul id="nav1">
+                    <li id="mar"><a href="#"><i class="fas fa-plus"></i> تابعنا </a>
+                        <ul>
+                            <li><a href="#" class="facebook3"><i class="fab fa-facebook-f"></i> الفيسبوك</a></li>
+                            <li><a href="#" class="youtube3"><i class="fab fa-youtube"></i> يوتيوب</a></li>
+                            <li><a href="#" class="twitter3"><i class="fab fa-twitter"></i> تويتر</a></li>
+                            <li><a href="#" class="instagram3"><i class="fab fa-instagram"></i> الانستغرام</a></li>
+                        </ul> 
+                    </li> 
+                    <li id="mar"><a href="#" style="font-size: 20px;" onclick="openForm()"><i class="fas fa-user-circle"></i></a></li> 
+                    <li id="mar" class="search-bare" aria-label="بحث">
+			            <form method="get" id="search" action="">
+                            <input id="search-input" class="is-ajax-search" inputmode="search" type="text" name="s" title="بحث عن" placeholder="بحث عن" autocomplete="off">
+                            <button id="search-submit" type="submit">
+                                <span class="fas fa-search" aria-hidden="true"></span>
+                            </button>
+			            </form>
+		            </li>
+
+                </ul>
+            </div>
+
+
+
+            <div class="social-media" style= "display:none;">
+                <ul>
+
+                    <li><a class="google-plus" href="#"></a></li>
+                    <li><a class="twitter" href="#"></a></li>
+                    <li><a class="instagram" href="#"></a></li>
+                    <li><a class="youtube" href="#"></a></li>
+                    <li><a class="facebook" href="https://www.facebook.com/gxp.arabi"></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="rainbow-line"></div>
+
+        <div class="header">
+            <div class="logo">
+                <img src="img/logo.jpg" alt="">
+            </div>
+            <div class="Meliodas-ads-1"></div>
+        </div>
+
+        <div class="tie-popup" id="myForm" style="display:none;">
+            <a href="#">
+                <i class="fas fa-times" id="remove" aria-hidden="true" onclick=closeForm();></i>
+                <span class="screen-reader-text">إغلاق</span>
+            </a>
+            <div class="cont">
+                <div class="conta">
+                    <h3 class="login"><i class="fas fa-lock"></i> تسجيل الدخول</h3>
+                    <div class="login_form">
+                        <form action="" class="form">
+                            <input type="username" placeholder="أسم المستخدم" class="username">
+                            <div class="pass">
+                                <input type="password" placeholder="كلمة المرور" class="password">
+                                <a href="" class="forget">نسيت كلمة المرور</a>
+                            </div>
+                            <label for="remember" class="remember">
+                                <input type="checkbox" class="checkbox"> تذكرني
+                            </label>
+                            <input type="submit" value="تسجيل الدخول" class="btn">
+                            <a href="" class="register">ليس لديك حساب؟</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container2">
+            <div class="rainbow-line1"></div>
+
+            <div class="tm-menu">
+                <div class="main-menu">
+                    <div class="body-row menu-wrap">
+                        <li class="hub-home"><a href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+                
+                        <div class="menu">
+                            <ul id="nav1">
+
+                                <li class="parent"><a href="#"><i class="fab fa-windows" aria-hidden="true"></i> انظمة التشغيل</a>
+                                    <ul>
+                                        <li class="parent">
+                                            <a href="#"><i class="fab fa-windows" aria-hidden="true"></i> ويندوز</a>
+                                            <ul>
+                                                <li><a href="#">ويندوز 11</a></li>
+                                                <li><a href="#">ويندوز 10</a></li>
+                                                <li><a href="#"> ويندوز 8.1 , 8</a></li>
+                                                <li><a href="#">ويندوز 7</a></li>
+                                                <li><a href="#">ويندوز vista</a></li>
+                                                <li><a href="#">ويندوز xp</a></li>
+                                                <li><a href="#">windows servre</a></li>
+                                            </ul>
+                                        </li>
+                    
+                                        <li class="parent">
+                                            <a href="#"><i class="fab fa-linux" aria-hidden="true"></i> لينكس</a>
+                                            <ul>
+                                                <li class="parent">
+                                                    <a href="#"><i class="fab fa-wpbeginner" aria-hidden="true"> للمستخدمين المبتدئين</i></a>
+                                                    <ul>
+                                                        <li><a href="#"> Mint</a></li>
+                                                        <li><a href="#"> Manjaro Linux</a></li>
+                                                        <li><a href="#">PCLinuxOS</a></li>
+                                                        <li><a href="#">Elementary OS</a></li>
+                                                        <li><a href="#"><i class="fab fa-ubuntu" aria-hidden="true"></i> Ubuntu</a></li>
+                                                    </ul>
+                                                </li> 
+                                                <li class="parent">
+                                                    <a href="#"><i class="fas fa-brain" aria-hidden="true"></i> للمستخدمين المتقدمين</a>
+                                                    <ul>        
+                                                        <li><a href="#"> Gentoo Linux</a></li>
+                                                        <li><a href="#"> Slackware</a></li>
+                                                        <li><a href="#">Debian</a></li>
+                                                        <li><a href="#"><i class="fab fa-fedora" aria-hidden="true"></i> Fedora</a></li>
+                                                        <li><a href="#">Arch Linux</a></li>
+                                                    </ul>
+                                                </li> 
+                                            </ul>    
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="parent"><a href="#"><i class="fas fa-mobile-alt" aria-hidden="true"></i> أنظمة الهواتف</a>
+                                    <ul>
+                                        <li><a href="#"><i class="fab fa-android" aria-hidden="true"></i> Android</a></li>
+                                        <li><a href="#">Harmony OS</a></li>
+                                        <li><a href="#"><i class="fab fa-rev" aria-hidden="true"></i> مرجعات الهواتف</a></li>
+                                    </ul> 
+                                </li>
+
+                                <li class="parent"><a href="#"><i class="fas fa-tasks" aria-hidden="true"></i> برامج </a>
+                                    <ul>
+                                        <li class="parent"><a href="#"><i class="fas fa-snowflake"></i> برامج أساسية</a>
+                                            <ul>
+
+                                                <li class="parent"><a href="#"><i class="fas fa-book-open" aria-hidden="true"></i> مكتبية | اوفيس </a>
+                                                    <ul>
+                                                        <li><a href="#"><i class="fas fa-file-word" aria-hidden="true"></i> Word </a></li>
+                                                        <li><a href="#"><i class="fas fa-file-excel" aria-hidden="true"></i> Exel </a></li>
+                                                        <li><a href="#"><i class="fas fa-file-powerpoint" aria-hidden="true"></i> PowerPoint </a></li>
+                                                        <li><a href="#"><i class="fas fa-file-access" aria-hidden="true"></i> Access </a></li>
+                                                        <li><a href="#"><i class="fas fa-file-Info" aria-hidden="true"></i> Info Bath </a></li>
+                                                        <li><a href="#"><i class="fas fa-file-publicish" aria-hidden="true"></i> Publicish </a></li>
+                                                        <li><a href="#"><i class="fas fa-file-outlook" aria-hidden="true"></i> Outlook </a></li>
+                                                        <li><a href="#"><i class="fas fa-file-grove" aria-hidden="true"></i> Grove </a></li>
+                                                    </ul>
+                                                </li>
+
+                                                <li><a href="#"><i class="fas fa-film" aria-hidden="true"></i> Maltimedia </a></li>
+                                                <li><a href="#"><i class="fas fa-file-archive" aria-hidden="true"></i> ضغط الملفات </a></li>
+                                                <li><a href="#"><i class="fas fa-download" aria-hidden="true"></i> التحميل </a></li>
+                                                <li><a href="#"><i class="fas fa-compact-disc" aria-hidden="true"></i> نسخ ألاسطوانات </a></li>
+                                                <li><a href="#"><i class="fas fa-quran" aria-hidden="true"></i> برامج أسلامية </a></li>   
+                                            </ul>
+                                        </li>
+
+                                        <li class="parent"><a href="#"><i class="fas fa-shield-alt" aria-hidden="true"></i> حمايه </a>
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-shield-virus" aria-hidden="true"></i> Antivirus </a></li>
+                                                <li><a href="#"><i class="fab fa-artstation" aria-hidden="true"></i> AntiMalwer </a></li>    
+                                            </ul>
+                                        </li>
+
+                                        <li class="parent"><a href="#"><i class="fas fa-tools" aria-hidden="true"></i> صيانة </a>
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-hdd" aria-hidden="true"></i> SoftWare </a></li>
+                                                <li><a href="#"><i class="fas fa-wrench" aria-hidden="true"></i> HardWara </a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="parent"><a href="#"><i class="fas fa-network-wired" aria-hidden="true"></i> أنترنت </a>
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-cloud-download-alt" aria-hidden="true"></i> مديرو التحميل </a></li>
+                                                <li><a href="#"><i class="fas fa-share-alt" aria-hidden="true"></i> مشاركة الملفات </a></li>
+                                                <li><a href="#"><i class="fab fa-chrome" aria-hidden="true"></i> متصفحات واضافات </a></li>
+                                                <li><a href="#"><i class="fas fa-hands-helping" aria-hidden="true"></i> المساعدة عن بعد </a></li>
+                                                <li><a href="#"><i class="fas fa-compress-alt" aria-hidden="true"></i> أختصار الروابط </a></li>
+                                                <li><a href="#"><i class="fas fa-comments" aria-hidden="true"></i> محادثات ودردشة </a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="parent"><a href="#"><i class="fas fa-pen-alt" aria-hidden="true"></i> تصميم وتصوير ومونتاج </a>
+                                            <ul>
+                                                <li><a href="#"><i class="far fa-file-pdf"></i> ادوبي </a></li>
+                                                <li><a href="#"><i class="fas fa-images" aria-hidden="true"></i> برامج عرض الصور </a></li>
+                                                <li><a href="#"><i class="fas fa-file-image" aria-hidden="true"></i> التعديل علي الصور </a></li>
+                                                <li><a href="#"><i class="fas fa-file-video" aria-hidden="true"></i> التعديل علي الفيديو </a></li>
+                                                <li><a href="#"><i class="far fa-file-image" aria-hidden="true"></i> تحول صيغة الصور </a></li>
+                                                <li><a href="#"><i class="far fa-file-video" aria-hidden="true"></i> تحويل صيغة الفيديو </a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="parent"><a href="#"><i class="fas fa-feather-alt" aria-hidden="true"></i> اخري </a>
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-window-restore" aria-hidden="true"></i> إستعادة </a></li>
+                                                <li><a href="#"><i class="fas fa-trash-alt" aria-hidden="true"></i> خذف الملفات </a></li>
+                                                <li><a href="#"><i class="fas fa-assistive-listening-systems" aria-hidden="true"></i> انظمة وهمية </a></li>
+                                                <li><a href="#"><i class="fas fa-compact-disc" aria-hidden="true"></i> أسطوانات وهمية </a></li>
+                                                <li><a href="#"><i class="fas fa-phone-square-alt" aria-hidden="true"></i> أتصالات </a></li>
+                                                <li><a href="#"><i class="fas fa-file-archive" aria-hidden="true"></i> الضغط والحرق </a></li>
+                                                <li><a href="#"><i class="fas fa-desktop" aria-hidden="true"></i> سطح المكتب </a></li>
+                                                <li><a href="#"><i class="fas fa-feather-alt" aria-hidden="true"></i> برامج اخري </a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li class="parent"><a href="#"><i aria-hidden="true" class="fa fa-video-camera"></i> دورات تعليمية </a>
+                                    <ul>
+
+                                        <li class="parent"><a href="#"><i class="fas fa-book-open" aria-hidden="true"></i> Office </a>
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-file-word" aria-hidden="true"></i> Word </a></li>
+                                                <li><a href="#"><i class="fas fa-file-excel" aria-hidden="true"></i> Exel </a></li>
+                                                <li><a href="#"><i class="fas fa-file-powerpoint" aria-hidden="true"></i> PowerPoint </a></li>
+                                                <li><a href="#"><i class="fas fa-file-access" aria-hidden="true"></i> Access </a></li>
+                                                <li><a href="#"><i class="fas fa-file-Info" aria-hidden="true"></i> Info Bath </a></li>
+                                                <li><a href="#"><i class="fas fa-file-publicish" aria-hidden="true"></i> Publicish </a></li>
+                                                <li><a href="#"><i class="fas fa-file-outlook" aria-hidden="true"></i> Outlook </a></li>
+                                                <li><a href="#"><i class="fas fa-file-grove" aria-hidden="true"></i> Grove </a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="parent"><a href="#"><i class="fab fa-adobe" aria-hidden="true"></i> Adobe </a>
+                                            <ul>
+                                                <li><a href="#">Photoshop</a></li>
+                                                <li><a href="#">Illustrator</a></li>
+                                                <li><a href="#">InDesign</a></li>
+                                                <li><a href="#">Premiere Pro</a></li>
+                                                <li><a href="#">XD</a></li>
+                                                <li><a href="#">Acrobat DC</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="parent"><a href="#"><i class="far fa-money-bill-alt" aria-hidden="true"></i> الربح من الانترنت </a>
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-blogger" aria-hidden="true"></i> دورة بلوجر </a></li>
+                                                <li><a href="#"><i class="fab fa-wordpress" aria-hidden="true"></i> دورة الوردبريس </a></li>
+                                                <li><a href="#"><i class="fab fa-youtube" aria-hidden="true"></i> دورة اليوتيوب </a></li>
+                                                <li><a href="#"><i class="fab fa-shopify" aria-hidden="true"></i> دورة الدروب شيبينج </a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="parent"><a href="#"><i class="fab fa-html5" aria-hidden="true"></i> Developer </a>
+                                            <ul>
+                                                <li><a href="#"><i class="fab fa-html5" aria-hidden="true"></i> HTML  CSS effect </a></li>
+                                                <li><a href="#"><i class="fab fa-js" aria-hidden="true"></i> JavaScript </a></li>
+                                                <li><a href="#"><i class="fab fa-php" aria-hidden="true"></i> PHP </a></li>
+                                                <li><a href="#"><i class="fas fa-building" aria-hidden="true"></i> Build a WebSite </a></li>
+                                                <li><a href="#"><i class="far fa-file-code" aria-hidden="true"></i> Become a Developer </a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="parent"><a href="#"><i class="fas fa-exclamation-triangle" aria-hidden="true"></i> مشاكل الويندوز </a>
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-tachometer-alt" aria-hidden="true"></i> تسريع وصيانة الويندوز </a></li>
+                                                <li><a href="#"><i class="fas fa-tools" aria-hidden="true"></i> معالجة البادسيكتور </a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li class="parent"><a href="#"><i class="fas fa-edit" aria-hidden="true"></i> التعديل </a>
+                                            <ul>
+                                                <li><a href="#"><i class="fas fa-edit" aria-hidden="true"></i> التعديل علي الويندوز </a></li>
+                                                <li><a href="#"><i class="far fa-edit" aria-hidden="true"></i> التعديل علي البرامج </a></li>
+                                            </ul>
+                                        </li>
+
+                                    </ul>
+                                </li>
+
+                                <li><a href="#"><i class="fas fa-microchip" aria-hidden="true"></i> تعريفات </a></li>
+
+                                <li class="parent"><a href="#"><i aria-hidden="true" class="fa fa-book"></i> كتب مدرسيه </a>
+                                    <ul>
+                                        <li class="parent"><a href="#"><i aria-hidden="true" class="fa fa-book"></i> ابتداي </a>
+                                            <ul>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف ألاول ألابتدائي</a></li>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف الثاني الابتدائي</a></li>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف الثالث ألابتدائي</a></li>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف الرابع ألابتدائي</a></li>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف الخامس الابتدائي</a></li>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف ألسادس ألابتدائي</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="parent"><a href="#"><i aria-hidden="true" class="fa fa-book"></i> أعدادي</a>
+                                            <ul>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف ألاول ألاعدادي</a></li>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف الثاني ألاعدادي</a></li>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف الثالث ألاعدادي</a></li>                                                                           
+                                            </ul>
+                                        </li>
+                                        <li class="parent"><a href="#"><i aria-hidden="true" class="fa fa-book"></i> ثانوي</a>
+                                            <ul>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف ألاول ألثانوي</a></li>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف الثاني ألثانوي</a></li>
+                                                <li><a href="#"><i aria-hidden="true" class="fa fa-book"></i> الصف الثالث ألثانوي</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>    
+
+                                <li class="parent"><a href="#"><i aria-hidden="true" class="fa fa-gamepad"></i> ألعاب </a>
+                                    <ul>
+                                        <li><a href="#">كرة قدم pes</a></li>
+                                        <li><a href="#">كرة قدم fifa</a></li>
+                                        <li><a href="#">استراتيجية Strategy</a></li>
+                                        <li><a href="#">اكشن Action</a></li>
+                                        <li><a href="#">رعـب horror</a></li>
+                                        <li><a href="#">سباق race</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="parent"><a href="#"><i aria-hidden="true" class="fa fa-tv"></i> أنمي مترجم </a>
+                                    <ul>
+                                        <li><a href="#">مسلسلات أنمي</a></li>
+                                        <li><a href="#">أفلام أنمي</a></li>
+                                        <li><a href="#">مانجا</a></li>
+                                    </ul>
+                                </li>
+                                
+                                <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> مالوير شوب </a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="rainbow-line2"></div>
+
+        </div>
+
+        <div class="news-tick-wrap">
+            <div class="news-tick-bar body-row">
+                <div class="ticker section" id="ticker" name="Ticker News">
+                    <h2 class="title">اخر الأخبار</h2>
+                    <div class="widget-content">
+                        <span data-type="recent" data-no="10"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <?php
+        /**
+         * The Sidebar containing the main widget areas.
+         *
+         * @package SKT Filmmaker
+         */
+        ?>
+        
+            <div id="sidebar">    
+                
+                <div class="trol">
+                    <h2 class="troll"><i class="fab fa-youtube"></i>  اشترك فى قناتى </h2>
+                    <div id="___ytsubscribe_0" style="text-indent: 0px;margin: 0px;padding: 0px;background: transparent;border-style: none;float: none;line-height: normal;font-size: 1px;vertical-align: baseline;display: inline-block;width: 167px;height: 48px;">
+                        <iframe ng-non-bindable="" frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static;top: 0px;width: 270px;margin: 0px;border-style: none;left: 0px;visibility: visible;height: 48px;" tabindex="0" vspace="0" width="100%" id="I0_1634457462143" name="I0_1634457462143" src="https://www.youtube.com/subscribe_embed?usegapi=1&amp;channelid=UCNDVuPTSKX9MFPJ3ANimOqQ&amp;layout=full&amp;count=default&amp;origin=http%3A%2F%2Flocalhost&amp;gsrc=3p&amp;ic=1&amp;jsh=m%3B%2F_%2Fscs%2Fapps-static%2F_%2Fjs%2Fk%3Doz.gapi.en.uAzDleg2hnU.O%2Fam%3DAQ%2Fd%3D1%2Frs%3DAGLTcCMT6b3QcRI88QolvkcdUjC8YnoTvA%2Fm%3D__features__#_methods=onPlusOne%2C_ready%2C_close%2C_open%2C_resizeMe%2C_renderstart%2Concircled%2Cdrefresh%2Cerefresh%2Conytevent%2Conload&amp;id=I0_1634457462143&amp;_gfid=I0_1634457462143&amp;parent=http%3A%2F%2Flocalhost&amp;pfname=&amp;rpctoken=41092455" data-gapiattached="true"></iframe>
+                    </div>        
+                </div>
+        
+                <div class="trol">
+                    <h2 class="troll"><i class="fab fa-facebook"></i>  تابعنا على الفيس بوك </h2>
+                    <div class="fraem">
+                        <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Finfinity0loop0course%2F&amp;tabs=timeline&amp;width=300&amp;height=500&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=151323888384559" width="360" height="500" scrolling="no" frameborder="0" allowtransparency="true"></iframe>        
+                    </div>
+                </div>
+        
+                <div class="trol">
+                    <h2 class="troll"><i class="far fa-list-alt"></i>  التسميات </h2>
+                    <div class="listo">
+                        <span class="label-size label-size-1">
+                            <a dir="rtl" href="">الضغط والحرق</a>
+                        </span>
+                        <span class="label-size label-size-5">
+                            <a dir="rtl" href="">انظمة التشغيل</a>
+                        </span>
+                        <span class="label-size label-size-1">
+                            <a dir="rtl" href="">برامج</a>
+                        </span>
+                        <span class="label-size label-size-1">
+                            <a dir="rtl" href="">صيانه</a>
+                        </span>
+                        <span class="label-size label-size-5">
+                            <a dir="rtl" href="">ويندوز</a>
+                        </span>
+                        <span class="label-size label-size-3">
+                            <a dir="rtl" href="">ويندوز 10</a>
+                        </span>
+                        <span class="label-size label-size-1">
+                            <a dir="rtl" href="">ويندوز 11</a>
+                        </span>
+                        <span class="label-size label-size-4">
+                            <a dir="rtl" href="">ويندوز 7</a>
+                        </span>
+                        <span class="label-size label-size-3">
+                            <a dir="rtl" href="">ويندوز 8</a>
+                        </span>
+                        <span class="label-size label-size-4">
+                            <a dir="rtl" href="">ويندوز 8.1</a>
+                        </span>
+                        <span class="label-size label-size-3">
+                            <a dir="rtl" href="">ويندوز سيرفر</a>
+                        </span>
+                        <span class="label-size label-size-3">
+                            <a dir="rtl" href="">ويندوز xp</a>
+                        </span>
+                    </div>
+                </div>
+        
+                <div class="trol">
+                    <h2 class="troll"><i class="far fa-list-alt"></i>  التسميات </h2>
+                    <div class="lasto">
+                        <span class="label-size label-size-1">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> الضغط والحرق</a>
+                        </span>
+                        <span class="label-size label-size-5">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> انظمة التشغيل</a>
+                        </span>
+                        <span class="label-size label-size-1">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> برامج</a>
+                        </span>
+                        <span class="label-size label-size-1">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> صيانه</a>
+                        </span>
+                        <span class="label-size label-size-5">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> ويندوز</a>
+                        </span>
+                        <span class="label-size label-size-3">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> ويندوز 10</a>
+                        </span>
+                        <span class="label-size label-size-1">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> ويندوز 11</a>
+                        </span>
+                        <span class="label-size label-size-4">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> ويندوز 7</a>
+                        </span>
+                        <span class="label-size label-size-3">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> ويندوز 8</a>
+                        </span>
+                        <span class="label-size label-size-4">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> ويندوز 8.1</a>
+                        </span>
+                        <span class="label-size label-size-3">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> ويندوز سيرفر</a>
+                        </span>
+                        <span class="label-size label-size-3">
+                            <a dir="rtl" href=""><i class="fas fa-tags"></i> ويندوز xp</a>
+                        </span>
+                    </div>
+                </div>
+        
+                <div class="trol">
+                    <h2 class="troll"><i class="far fa-share-square"></i>  المشاركات الشائعة </h2>
+        
+                </div>
+        
+            </div>
+         </div>
+        
+         
+            <div class="footer-wrapper">
+                    <div id="footed1" class="troll">
+                        <h2 class="troll2">الأشهر</h2>
+                    </div>
+                    <div id="footed2" class="troll">
+                        <h2 class="troll2">الأخيرة</h2>
+                    </div>
+                    <div id="footed3" class="troll">
+                      <h2 class="troll2">اعلان</h2>
+                    </div>
+        
+            </div>
+        
+            <div class="copyright">
+                <div class="right">
+                            جميع الحقوق محفوظة لـ ©
+                        <a href="https://gxp-arabi.blogspot.com">
+                          <span style="color: #ff3d0d;">
+                            GXP-Arabi for Training 
+                            </span></a><a href="https://gxp-arabi.blogspot.com/">
+                          
+                        </a>
+                        | Designer 
+                        <span style="color: #ff3d0d;">
+                          EL-Deghedy
+                          
+                          <a href="https://gxp-arabi.blogspot.com">
+                        </a></span>
+                            | Writer 
+                          <a href="https://gxp-arabi.blogspot.com">
+          
+                        <span style="color: #ff3d0d;">
+                          Meliodas
+                          </span></a>
+          
+                        | Supervisor
+                          <a href="https://gxp-arabi.blogspot.com/">
+            
+                        <span style="color: #ff3d0d;">
+                          Meliodas
+                          </span></a>
+                        <a href="https://gxp-arabi.blogspot.com/">
+                        
+        </a>
+        
+                </div>
+        
+                <div class="left">
+                    <div id="social-media1">
+                        <ul>
+                            <li><a class="google-plus" href="http://"></a></li>
+                            <li><a class="twitter" href="https://twitter.com/DeghedyMeliodas"></a></li>
+                            <li><a class="instagram" href="https://www.instagram.com/gxp_arabi"></a></li>
+                            <li><a class="youtube" href="https://www.youtube.com/channel/UCNDVuPTSKX9MFPJ3ANimOqQ"></a></li>
+                            <li><a class="facebook" href="https://www.facebook.com/gxp.arabi"></a></li>
+                        </ul>
+        
+                    </div>
+                </div>
+        
+            </div>
+        
+            <div class="smoothscroll-top show">
+              <span class="scroll-top-inner">
+              <i aria-hidden="true" class="fa fa-angle-up"></i>
+              </span>
+            </div>
+        
+        <script src="js/scroll.js"></script>
+        
+        
+            <!--end .footer-wrapper-->
+        </body>
+        </html>
